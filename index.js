@@ -38,6 +38,13 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Game backend API is running"
+  });
+});
+
 const PORT = process.env.PORT || 4010;
 app.listen(PORT, () => {
   console.log(`Backend server running on http://localhost:${PORT}`);
